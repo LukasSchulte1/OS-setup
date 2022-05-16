@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes 
+  tasks:
+    - name: DNF Update
+    - dnf:
+        name: "*"
+        state: latest
+    - name: Chromium
+    - dnf: 
+        name: chromium
+        state: present
+    - name: thunderbird
+
+      
